@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Hello Client</h1>
+    <button (click)="sayHello()" [disabled]="loading">
+        {{ loading ? 'Loading...' : 'Hello Server' }}
+    </button>
+
+    <div *ngIf="message" class="message">
+        <p>{{ message }}</p>
+    </div>
+</div>

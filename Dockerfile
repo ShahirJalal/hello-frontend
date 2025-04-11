@@ -27,7 +27,8 @@ RUN npm run build
 
 # Runtime stage
 FROM nginx:alpine
-COPY --from=build /app/dist/frontend /usr/share/nginx/html
+# Update this line to copy from the browser subdirectory
+COPY --from=build /app/dist/frontend/browser /usr/share/nginx/html
 
 # Create nginx config
 RUN echo 'server { \

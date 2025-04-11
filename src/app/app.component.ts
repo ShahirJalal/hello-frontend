@@ -19,7 +19,7 @@ export class AppComponent {
 
   sayHello() {
     this.loading = true;
-    this.http.get('http://localhost:8080/api/hello', { responseType: 'text' })
+    this.http.get('/api/hello', { responseType: 'text' })
       .subscribe({
         next: (response) => {
           this.message = response;
